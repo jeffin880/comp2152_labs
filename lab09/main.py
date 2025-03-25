@@ -106,4 +106,5 @@ while m_health_points > 0 and health_points > 0:
         if health_points != 0:
             input("The hero strikes!! (Press enter)")
             # Hero Attacks Back
-            m_health_points = function.hero_attacks(combat_strength, m_health_points)2
+            m_health_points = function.hero_attacks(combat_strength, m_health_points)
+            
