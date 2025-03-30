@@ -1,10 +1,11 @@
+
 # Tick class for aggregation
 class Tick:
     def __init__(self):
-        print("Aggrigation: Tick is Created.")
+        print("Aggregation: Tick is created.")
 
-    def consume_blood(self):
-        print("Tick is consuming blood..")        
+    def suck_blood(self):
+        print("Tick is feeding...")
 
     def __del__(self):
-        print("Aggrigation: Tick is destroyed,")
+        print("Aggregation: Tick is destroyed.")

@@ -1,3 +1,4 @@
+
 from mammal import Mammal
 from person import Person
 from mammal import Mammal
@@ -29,7 +30,7 @@ print("Do humans give live birth: " + str(person1.live_birth))
 
 print("\n--- Creating a Tick object for aggregation --- ")
 tick1 = Tick()
-tick1.consume_blood()
+tick1.suck_blood()
 
 print("\n--- Creating a Puma object (aggregation with Tick) --- ")
 puma1 = Puma(2, tick1)
@@ -40,7 +41,7 @@ print("Puma has sharp claws: " + str(puma1.sharp_claws))
 puma1.love()
 
 # Aggregated object interaction
-puma1.tick.consume_blood()
+puma1.tick.suck_blood()
 
 # Optional: show that tail_length is not defined if not implemented
 # print(puma1.tail_length)  # Uncomment only if tail_length exists

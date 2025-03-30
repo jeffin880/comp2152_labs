@@ -6,29 +6,31 @@ class Mammal:
         self.age = p_age
         self.__live_birth = True
 
+        # Composition: Heart is part of Mammal's internal structure
         self.heart = Heart()
-        # Tick is an external, may or may not exist
-        self.tick= tick
 
-
+        # Aggregation: Tick is external, may or may not exist
+        self.tick = tick
 
     def __del__(self):
         print("Destructor: The garbage collector is now deleting the Mammal part of the object")
 
     @property
     def live_birth(self):
-        self.__live_birth
+        return self.__live_birth
+
     @live_birth.setter
-    def live_birth(self, p_live_birth):
+    def height(self, p_live_birth):
         self.__live_birth = p_live_birth
 
     def love(self):
-        print("This mammal is feeling love..")
+        print("This mammal is feeling love...")
 
-    def mammal_chechup(self):
+    def mammal_checkup(self):
+        print("Performing mammal health check...")
         self.heart.beat()
         if self.tick:
-            self.tick.consume_blood()
+            self.tick.suck_blood()
 
     def __str__(self):
         tick_status = "attached" if self.tick else "none"
